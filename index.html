@@ -25,11 +25,8 @@
             color: #fff;
             padding: 20px;
             display: flex;
-            /* 使用 flexbox 排列內容 */
             justify-content: space-between;
-            /* 左右對齊 */
             align-items: center;
-            /* 垂直居中 */
         }
 
         nav h2 a {
@@ -46,7 +43,10 @@
         }
 
         nav ul li {
+            display: inline-block;
+            /* 將項目排成一行 */
             margin-right: 20px;
+            /* 項目之間的間距 */
         }
 
         nav ul li a {
@@ -76,41 +76,6 @@
             margin: 20px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        thead {
-            background-color: #333;
-            color: #fff;
-        }
-
-        thead td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        tbody td {
-            padding: 10px;
-            border: 1px solid #ccc;
-            /* 添加外圍線條 */
-        }
-
-        .td_progress {
-            color: #ff0000;
-            /* 設定進度顏色 */
-        }
-
-        .td_testGrade {
-            color: #ff0000;
-            /* 設定測驗分數顏色 */
-        }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -128,6 +93,27 @@
 
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+
+        /* 個人檔案子導覽列的位置調整 */
+        #profile-menu {
+            position: relative;
+            /* 相對定位 */
+        }
+
+        #user-options {
+            position: absolute;
+            /* 絕對定位 */
+            top: 100%;
+            /* 與父元素底部對齊 */
+            left: 0;
+            display: none;
+            /* 隱藏 */
+        }
+
+        #profile-menu:hover #user-options {
+            display: block;
+            /* 滑鼠移動到項目時顯示子導覽列 */
         }
     </style>
 </head>
